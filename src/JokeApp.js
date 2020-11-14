@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './JokeApp.css';
 
 function JokeApp() {
 
-  const [joke, setJoke] = useState('');
+  const [joke, setJoke] = useState("Click 'New Joke' for a new joke!");
   const [upVotes, setUpVotes] = useState(0);
   const [downVotes, setDownVotes] = useState(0);
   const [jokeID, setJokeID] = useState('');
@@ -70,12 +71,16 @@ function JokeApp() {
 
   return(
     <div>
-      <h3>Joke App!</h3>
-      <h4>{joke}</h4>
-      <h5>Up Votes: {upVotes}   Down Votes: {downVotes}</h5>
-      <button onClick={upVote}>Up Vote</button>
-      <button onClick={downVote}>Down Vote</button>
-      <button onClick={getJoke}>New Joke</button>
+      <div className="title">Joke App!</div>
+      <div className="jokeText">{joke}</div>
+      <div className="votes">Up Votes: {upVotes}   Down Votes: {downVotes}</div>
+      <div className="voting">
+        <button className="upVoteButton" onClick={upVote}>Up Vote</button>
+        <button classNmae="downVoteButton" onClick={downVote}>Down Vote</button>
+      </div>
+      <div className="newJoke">
+         <button className="newJokeButton" onClick={getJoke}>New Joke</button>
+      </div>
     </div>
   );
 

@@ -1,0 +1,29 @@
+.title {
+  font-size: 22pt;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.jokeText {
+  font-size: 18pt;
+  text-align: center;
+}
+
+.votes {
+  font-size: 16pt;
+  text-align: center;
+  padding: 5px;
+}
+
+.voting {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.newJoke {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
